@@ -97,6 +97,4 @@ $(function () {
       $('.pannel .msg').removeClass('success').addClass('error').text('用户名或密码错误');
     }
   });
-
-
 });
