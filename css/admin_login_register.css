@@ -1,0 +1,66 @@
+.pannel {
+  width: 300px;
+  height: 350px;
+  background-color: #f8f8f8;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* box-shadow: 3px 3px #ddd; */
+  border-radius: 10px;
+  opacity: 0.8;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.pannel .middle .left {
+  width: 80px;
+  height: 20px;
+  margin: 10px auto;
+  color: red;
+  padding-bottom: 10px;
+  border-bottom: 3px solid red;
+}
+
+.pannel .middle .right {
+  font-size: 10px;
+  float: right;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.pannel .middle .info {
+  width: 200px;
+  margin: 10px auto;
+}
+
+.pannel .middle .info ul li {
+  margin-top: 10px;
+}
+
+.pannel .middle .info ul li input {
+  height: 30px;
+  padding-left: 10px;
+}
+
+.pannel .bottom div{
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: white;
+  background-color: #f00;
+  margin: 30px auto;
+}
+
+/* 错误信息样式 */
+.pannel .error{
+  color: red;
+  font-size: 10px;
+}
+.pannel .success{
+  color: green;
+  font-size: 10px;
+}
