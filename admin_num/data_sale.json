@@ -1,0 +1,110 @@
+{
+  "returnCode": 0,
+  "total": 10,
+  "beans": [{
+    "id": 12212,
+    "user_id": 12121,
+    "nums": 12,
+    "product_name": "asdasda",
+    "price": 1211,
+    "time": "2019年3月30日"
+  }, {
+    "id": 12212,
+    "user_id": 12121,
+    "nums": 12,
+    "product_name": "asdasda",
+    "price": 1211,
+    "time": "2019年3月30日"
+  },{
+    "id":12212,
+    "user_id":12121,
+    "nums":12,
+    "product_name":"asdasda",
+    "price":1211,
+    "time":"2019年3月30日"
+  },{
+    "id":12212,
+    "user_id":12121,
+    "nums":12,
+    "product_name":"asdasda",
+    "price":1211,
+    "time":"2019年3月30日"
+  },{
+    "id":12212,
+    "user_id":12121,
+    "nums":12,
+    "product_name":"asdasda",
+    "price":1211,
+    "time":"2019年3月30日"
+  },{
+    "id":12212,
+    "user_id":12121,
+    "nums":12,
+    "product_name":"asdasda",
+    "price":1211,
+    "time":"2019年3月30日"
+  },{
+    "id":12212,
+    "user_id":12121,
+    "nums":12,
+    "product_name":"asdasda",
+    "price":1211,
+    "time":"2019年3月30日"
+  },{
+    "id":12212,
+    "user_id":12121,
+    "nums":12,
+    "product_name":"asdasda",
+    "price":1211,
+    "time":"2019年3月30日"
+  },{
+    "id":12212,
+    "user_id":12121,
+    "nums":12,
+    "product_name":"asdasda",
+    "price":1211,
+    "time":"2019年3月30日"
+  },{
+    "id":12212,
+    "user_id":12121,
+    "nums":12,
+    "product_name":"asdasda",
+    "price":1211,
+    "time":"2019年3月30日"
+  },{
+    "id":12212,
+    "user_id":12121,
+    "nums":12,
+    "product_name":"asdasda",
+    "price":1211,
+    "time":"2019年3月30日"
+  },{
+    "id":12212,
+    "user_id":12121,
+    "nums":12,
+    "product_name":"asdasda",
+    "price":1211,
+    "time":"2019年3月30日"
+  },{
+    "id":12212,
+    "user_id":12121,
+    "nums":12,
+    "product_name":"asdasda",
+    "price":1211,
+    "time":"2019年3月30日"
+  },{
+    "id":12212,
+    "user_id":12121,
+    "nums":12,
+    "product_name":"asdasda",
+    "price":1211,
+    "time":"2019年3月30日"
+  },{
+    "id":12212,
+    "user_id":12121,
+    "nums":12,
+    "product_name":"asdasda",
+    "price":1211,
+    "time":"2019年3月30日"
+  }]
+}

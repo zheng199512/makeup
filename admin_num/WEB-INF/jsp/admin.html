@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>化妆品-管理员登录</title>
+  <script src="../../js/lib/jquery-3.3.1.min.js"></script>
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/admin.css">
+  <script src="../../js/product.js"></script>
+</head>
+
+<body>
+
+  <div class="top">
+    <div class="logo"><img src="../../images/logo.png" alt="logo"></div>
+    <div class="mulu">
+      <ul>
+        <li class="manage">化妆品登记管理</li>
+        <li>美容师管理</li>
+        <li class="sale">销售记录</li>
+      </ul>
+    </div>
+  </div>
+  <!-- 商品界面 -->
+  <div class="content">
+    <div class="search clearfix">
+      <div class="add">添加</div>
+      <div class="search-content">
+        <label for="">搜索：</label>
+        <input type="text" placeholder="分类名称" class="search-text">
+        <div class="search-button">确定</div>
+      </div>
+    </div>
+    <div class="product clearfix">
+      <div class="title clearfix">
+        <ul>
+          <li><span>编号</span></li>
+          <li><span>名称</span></li>
+          <li><span>价格（元）</span></li>
+          <li><span>图片链接</span></li>
+          <li><span>分类</span></li>
+          <li><span>数量</span></li>
+          <li><span>已售</span></li>
+          <li><span>操作</span></li>
+        </ul>
+      </div>
+      <div class="test">
+        <!-- 商品内容 -->
+      </div>
+    </div>
+  </div>
+  <!-- 商品页面结束 -->
+  <!-- 商品添加页面开始 -->
+  <div class="add-pro hide">
+
+    <div class="add-main">
+      <ul class="add-ul">
+        <li>
+          <label for="">名称：</label>
+          <input type="text" placeholder="输入名称" class="name">
+          <span class="msg name-msg"></span>
+        </li>
+        <li>
+          <label for="">价格：</label>
+          <input type="text" placeholder="输入价格" class="price">
+          <span class="msg price-msg"></span>
+        </li>
+        <li>
+          <label for="">图片：</label>
+          <input type="file" id="pic">
+        </li>
+        <li>
+          <label for="">分类：</label>
+          <select name="" id="classify">
+            <option value="护肤">护肤</option>
+            <option value="美妆">美妆</option>
+            <option value="香氛">香氛</option>
+          </select>
+        </li>
+        <li>
+          <label for="">数量：</label>
+          <input type="text" placeholder="输入数量" class="num">
+          <span class="msg num-msg"></span>
+        </li>
+        <li>
+          <div class="add-button">确认</div>
+          <span class="msg add-button-msg"></span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+  <!-- 商品添加页面结束 -->
+  <!-- 销售记录开始 -->
+  <div class="sale_record">
+    <div class="sale_main">
+      <div class="sale_title clearfix">
+        <ul>
+          <li><span>编号</span></li>
+          <li><span>用户名</span></li>
+          <li><span>商品名</span></li>
+          <li><span>个数</span></li>
+          <li><span>价格</span></li>
+          <li><span>时间</span></li>
+        </ul>
+      </div>
+      <div class="sale-main-main">
+        <!-- 销售记录内容 -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 销售记录结束 -->
+</body>
+
+</html>

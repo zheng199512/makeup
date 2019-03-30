@@ -1,0 +1,141 @@
+{
+  "returnCode": 0,
+  "total": 19,
+  "beans": [{
+      "id": 112222,
+      "name": "nihao",
+      "price": 12.00,
+      "pic_url": "http://www.icodehub.com",
+      "classify": "化妆品",
+      "num": 1,
+      "sale_volume":1
+    },
+    {
+      "id": 112222,
+      "name": "nihao",
+      "price": 12.00,
+      "pic_url": "http://www.icodehub.com",
+      "classify": "化妆品",
+      "num": 12,
+      "sale_volume":1
+    },
+    {
+      "id": 112222,
+      "name": "nihao",
+      "price": 12.00,
+      "pic_url": "http://www.icodehub.com",
+      "classify": "化妆品",
+      "num": 1,
+      "sale_volume":1
+    },
+    {
+      "id": 112222,
+      "name": "nihao",
+      "price": 12.00,
+      "pic_url": "http://www.icodehub.com",
+      "classify": "化妆品",
+      "num": 12,
+      "sale_volume":1
+
+    },
+    {
+      "id": 112222,
+      "name": "nihao",
+      "price": 12.00,
+      "pic_url": "http://www.icodehub.com",
+      "classify": "化妆品",
+      "num": 12,
+      "sale_volume":1
+    },
+    {
+      "id": 112222,
+      "name": "nihao",
+      "price": 12.00,
+      "pic_url": "http://www.icodehub.com",
+      "classify": "化妆品",
+      "num": 12,
+      "sale_volume":1
+    },
+    {
+      "id": 112222,
+      "name": "nihao",
+      "price": 12.00,
+      "pic_url": "http://www.icodehub.com",
+      "classify": "化妆品",
+      "num": 12,
+      "sale_volume":1
+    },
+    {
+      "id": 112222,
+      "name": "nihao",
+      "price": 12.00,
+      "pic_url": "http://www.icodehub.com",
+      "classify": "化妆品",
+      "num": 12,
+      "sale_volume":1
+    },
+    {
+      "id": 112222,
+      "name": "nihao",
+      "price": 12.00,
+      "pic_url": "http://www.icodehub.com",
+      "classify": "化妆品",
+      "num": 12,
+      "sale_volume":1
+    },
+    {
+      "id": 112222,
+      "name": "nihao",
+      "price": 12.00,
+      "pic_url": "http://www.icodehub.com",
+      "classify": "化妆品",
+      "num": 12,
+      "sale_volume":1
+    },
+    {
+      "id": 112222,
+      "name": "nihao",
+      "price": 12.00,
+      "pic_url": "http://www.icodehub.com",
+      "classify": "化妆品",
+      "num": 12,
+      "sale_volume":1
+    },
+    {
+      "id": 112222,
+      "name": "nihao",
+      "price": 12.00,
+      "pic_url": "http://www.icodehub.com",
+      "classify": "化妆品",
+      "num": 12,
+      "sale_volume":1
+    },
+    {
+      "id": 112222,
+      "name": "nihao",
+      "price": 12.00,
+      "pic_url": "http://www.icodehub.com",
+      "classify": "药品",
+      "num": 12,
+      "sale_volume":1
+    },
+    {
+      "id": 112222,
+      "name": "nihao",
+      "price": 12.00,
+      "pic_url": "http://www.icodehub.com",
+      "classify": "化妆品",
+      "num": 12,
+      "sale_volume":1
+    },
+    {
+      "id": 112222,
+      "name": "nihao",
+      "price": 12.00,
+      "pic_url": "http://www.icodehub.com",
+      "classify": "化妆品",
+      "num": 12,
+      "sale_volume":1
+    }
+  ]
+}

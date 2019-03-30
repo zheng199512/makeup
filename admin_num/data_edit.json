@@ -1,0 +1,13 @@
+{
+  "returnCode": 0,
+  "total": 19,
+  "bean": {
+    "id": 112222,
+    "name": "nihao",
+    "price": 12.00,
+    "pic_url": "http://www.icodehub.com",
+    "classify": "香氛",
+    "num": 1,
+    "sale_volume": 1
+  }
+}
