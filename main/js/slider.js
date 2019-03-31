@@ -6,7 +6,6 @@ window.onresize = function () { //监听窗口变化
   imgHeight = $('.slider-item').height();
 }
 var sliderContent = $('#img-container');
-
 $('.slider-item').css({
   'width': imgWidth
 });
@@ -16,14 +15,14 @@ $('#slider-container').css({
 $('#img-container').css('width', imgWidth * 5);
 $('#img-container').css('left', -imgWidth);
 var index = 1;
-var size = $('.slider-item').length - 2;
+var size = $('.slider-item').length;
 
 var t = setInterval(function () {
   index++;
   move(index);
 }, 3000);
 
-$('.img-container').hover(function () {
+$('.slider').hover(function () {
   clearInterval(t);
 }, function () {
   t = setInterval(function () {
@@ -32,28 +31,29 @@ $('.img-container').hover(function () {
   }, 10000);
 });
 
-// $('.btn-next').on('click', function () {
-//   index++;
-//   move(index);
-// });
-// $('.btn-prev').on('click', function () {
-//   index--;
-//   move(index);
-// })
+$('.btn-next').on('click', function () {
+  index++;
+  move();
+});
+$('.btn-prev').on('click', function () {
+  index--;
+  move();
+})
 
 function move() {
-  if (index == (size + 1)) {
+  if (index == 0) {
+    sliderContent.stop().css({
+      left: -imgWidth*4
+    });
+    index = 3;
+  }
+  if (index == (size-1)) {
     sliderContent.stop().css({
       left: 0
     });
     index = 1;
   }
-  if (index == 0) {
-    sliderContent.stop().css({
-      left: -imgWidth
-    });
-    index = 5;
-  }
+  
   sliderContent.stop().animate({
     left: -index * imgWidth
   }, 1000);

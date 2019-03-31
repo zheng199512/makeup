@@ -10,6 +10,7 @@
 
   <link rel="stylesheet" href="../../css/reset.css">
   <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/user_login.css">
   <script for=window event=onresize>
     location.reload();
   </script>
@@ -19,64 +20,204 @@
   <div class="logo">
     <div class="left">
       <div class="left-logo">
-        <img src="../../images/logo.png" alt="">
+        <a href="http://127.0.0.1:5500/main/WEB-INF/jsp/main.html"><img src="../../images/logo.png" alt=""></a>
       </div>
       <div class="classify">
         <ul>
-          <li>护肤</li>
-          <li>美妆</li>
-          <li>香氛</li>
+          <li><a href="#hufu">护肤</a></li>
+          <li><a href="#meizhuang">美妆</a></li>
+          <li><a href="#xiangfen">香氛</a></li>
         </ul>
       </div>
     </div>
     <div class="right">
-      <div class="login">登录|注册</div>
+      <div class="login">登&nbsp;录&nbsp;|&nbsp;注&nbsp;册</div>
     </div>
   </div>
   <div class="header">
     <div class="slider">
-      <div class="prev"></div>
+      <div class="btn-prev">&lt;</div>
       <div id="slider-container">
         <div id="img-container">
           <div class="slider-item">
-            <img src="../../images/img3.jpg" alt="">
+            <a href="">
+              <img src="../../images/img3.jpg" alt=""></a>
           </div>
           <div class="slider-item">
-            <img src="../../images/img1.jpg" alt="">
+            <a href="">
+              <img src="../../images/img1.jpg" alt=""></a>
           </div>
           <div class="slider-item">
-            <img src="../../images/img2.jpg" alt="">
+            <a href="">
+              <img src="../../images/img2.jpg" alt=""></a>
           </div>
           <div class="slider-item">
-            <img src="../../images/img3.jpg" alt="">
+            <a href="">
+              <img src="../../images/img3.jpg" alt=""></a>
           </div>
           <div class="slider-item">
-            <img src="../../images/img1.jpg" alt="">
+            <a href="">
+              <img src="../../images/img1.jpg" alt=""></a>
           </div>
         </div>
       </div>
-
-      <div class="next"></div>
+      <div class="btn-next">&gt;</div>
     </div>
   </div>
   <div class="main-content">
-    <div class="skin">
+    <div class="skin" id="hufu" name="hufu">
+      <div class="skin-top">
+        护肤专区
+      </div>
+      <div class="skin-content clearfix" id="hufu-content">
 
+      </div>
     </div>
-    <div class="make">
+    <div class="skin" id="meizhuang" name="meizhuang">
+      <div class="skin-top">
+        美妆专区
+      </div>
+      <div class="skin-content clearfix" id="meizhuang-content">
 
+      </div>
     </div>
-    <div class="fragrance">
+    <div class="skin" id="xiangfen" name="xiangfen">
+      <div class="skin-top">
+        香氛专区
+      </div>
+      <div class="skin-content clearfix" id="xiangfen-content">
 
+      </div>
     </div>
   </div>
-  <div class="list">
-
+  <div class="list clearfix">
+    <div class="list-content">
+      <div class="left">
+        <div class="hufu-list">
+          <div class="hufu-list-title">
+            护肤排行
+          </div>
+          <div class="hufu-list-content" >
+            <ul id="hufu-list">
+              <li><a href="">1221212</a></li>
+              <li><a href="">121212</a></li>
+              <li><a href="">12121212</a></li>
+              <li><a href="">121212</a></li>
+              <li><a href="">1212121</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mid">
+        <div class="hufu-list">
+          <div class="hufu-list-title">
+            美妆排行
+          </div>
+          <div class="hufu-list-content" >
+            <ul id="meizhuang-list">
+              <li><a href="">121212</a></li>
+              <li><a href="">121212</a></li>
+              <li><a href="">121212</a></li>
+              <li><a href="">121212</a></li>
+              <li><a href="">121212</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="hufu-list">
+          <div class="hufu-list-title">
+            香氛排行
+          </div>
+          <div class="hufu-list-content" >
+            <ul id="xiangfen-list">
+              <li><a href="">121212</a></li>
+              <li><a href="">121212</a></li>
+              <li><a href="">121212</a></li>
+              <li><a href="">121212</a></li>
+              <li><a href="">1212122</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="footer">
-
+    <div class="bottom">
+      <span>前往armani exchangePowered by YOOX NET-A-PORTER GROUP - Copyright © 2019 乔治阿玛尼 - All Rights Reserved</span>
+    </div>
   </div>
-  <script src="../../js/slider.js"></script>
+
+  <!-- 登录注册 -->
+  <div class="login-register hide">
+    <div class="user-pannel">
+      <div class="user-top">
+        <div class="right">X</div>
+      </div>
+      <div class="user-bottom">
+        <div class="bg">
+          <img src="../../images/20190331182413.png" alt="">
+        </div>
+        <div class="user-left">
+          <div class="left-title">登&nbsp;录</div>
+          <div class="left-main">
+            <ul>
+              <li>
+                <label for="">手机号码：</label>
+                <input type="text" placeholder="手机号码" class="login-phone"><br>
+                <span></span>
+              </li>
+              <li>
+                <label for="">密码：</label>
+                <input type="password" placeholder="密码" class="login-password"><br>
+                <span></span>
+              </li>
+              <li>
+                <div class="login-button">确认</div><br>
+                <span class="login-msg"></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="user-right">
+          <div class="right-title">注&nbsp;册</div>
+          <div class="right-main">
+            <ul>
+              <li>
+                <label for="">手机号码：</label>
+                <input type="text" placeholder="手机号码" class="register-phone"><br>
+                <span></span>
+              </li>
+              <li>
+                <label for="">密码：</label>
+                <input type="password" placeholder="密码" class="register-password"><br>
+                <span></span>
+              </li>
+              <li>
+                <label for="">确认密码：</label>
+                <input type="password" placeholder="确认密码" class="register-password-confirm"><br>
+                <span></span>
+              </li>
+              <li>
+                <div class="register-button">注册</div><br>
+                <span class="register-msg"></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 登录注册结束 -->
+
+  <!-- 咨询定位 -->
+  <div class="contact">
+    <img src="../../images/contact.png" alt="">
+  </div>
+  <!-- 咨询定位结束 -->
 </body>
+<script src="../../js/slider.js"></script>
+<script src="../../js/user_login.js"></script>
+<script src="../../js/content.js"></script>
 
 </html>

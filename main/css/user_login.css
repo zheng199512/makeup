@@ -1,0 +1,109 @@
+.login-register {
+  position: absolute;
+  width: 800px;
+  height: 390px;
+  background-color: #ffffff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #888;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.user-pannel .user-top {
+  height: 30px;
+  padding-bottom: 5px;
+  /* border-bottom: 2px solid #f00; */
+}
+
+.user-bottom .bg {
+  width: 200px;
+  height: 300px;
+  float: left;
+}
+
+.user-bottom .bg img {
+  width: 100%;
+  height: 100%;
+}
+
+.user-pannel .right {
+  float: right;
+  box-sizing: border-box;
+  height: 30px;
+  margin-right: 10px;
+  margin-top: 4px;
+  /* margin-bottom:5px; */
+  line-height: 30px;
+  text-align: center;
+}
+
+.user-pannel .right:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.user-bottom .user-left,
+.user-bottom .user-right {
+  float: left;
+  width: 300px;
+}
+
+.user-bottom .left-title,
+.user-bottom .right-title {
+  margin-top: 30px;
+  margin-left: 25px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.user-bottom .left-main label,
+.user-bottom .right-main label {
+  display: inline-block;
+  width: 70px;
+  font-size: 14px;
+}
+
+.user-bottom .left-main li,
+.user-bottom .right-main li {
+  margin-top: 10px;
+}
+
+.user-bottom .left-main li span,
+.user-bottom .right-main li span {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.user-bottom .left-main li .login-button,
+.user-bottom .right-main li .register-button {
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+}
+
+.user-bottom .left-main li .login-button:hover,
+.user-bottom .right-main li .register-button:hover {
+  background-color: #333;
+}
+
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
+}
