@@ -162,18 +162,20 @@
 
 .skin .skin-content .skin-item .skin-img {
   box-sizing: border-box;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 .skin .skin-content .skin-item .skin-img img {
-  width: 100%;
-  height: 100%;
+  width: 450px;
+  font-size: 0;
+  
 }
 
 .skin .skin-content .skin-item .skin-desc .left {
   margin-left: 10px;
   float: left;
   color: red;
-
 }
 
 .skin .skin-content .skin-item .skin-desc .left span {
@@ -221,10 +223,10 @@
   margin: 0 auto;
   margin-top: 30px;
   margin-bottom: 30px;
-  padding-bottom:20px;
-  padding-top:20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
   background: url('../images/999.jpg') no-repeat center center;
-  background-size:cover;
+  background-size: cover;
 }
 
 .list .left,
