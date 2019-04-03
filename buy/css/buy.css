@@ -33,9 +33,175 @@
   text-align: center;
 }
 
-.hide{
+.hide {
   display: none;
 }
-.show{
+
+.show {
   display: show;
+}
+
+.logo {
+  margin: 0 auto;
+}
+
+.line {
+  width: 100%;
+  border: 1px solid #eee;
+  box-shadow: 1px 1px #eee;
+}
+
+.buy-content {
+  width: 980px;
+  margin: 0 auto;
+  /* background: #eee; */
+  margin-top: 20px;
+}
+
+.buy-content .buy-left {
+  float: left;
+  width: 50%;
+  overflow: hidden;
+  
+  box-sizing: border-box;
+  border: 10px solid #fff;
+}
+
+.buy-content .buy-right {
+  float: left;
+  width: 50%;
+}
+
+.buy-content .buy-right .buy-name {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #000;
+}
+
+.buy-content .buy-right .buy-price {
+  background: url(//shop.vipstatic.com/img/detail/detail_price_bg_l-hash-8ee789be.png?0d2291d1) no-repeat #faf5f8;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  position: relative;
+  border-radius: 4px;
+  z-index: 13;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.buy-content .buy-right .buy-price .ren {
+  color: #f43499;
+  font-size: 20px;
+  font-family: arial;
+  float: left;
+  margin-top: 24px;
+}
+
+.buy-content .buy-right .buy-price .item-price {
+  float: left;
+  font-style: normal;
+  font-weight: 400;
+  color: #f43499;
+  line-height: 1.2;
+  font-size: 48px;
+}
+
+.buy-content .buy-right .buy-num .title {
+  float: left;
+  font-size: 12px;
+  width: 40px;
+  text-align: left;
+  color: #999;
+  line-height: 32px;
+  overflow: hidden;
+}
+
+.buy-content .buy-right .buy-num .num-left {
+  float: left;
+  height: 28px;
+  line-height: 28px;
+  width: 25px;
+  border: 1px solid #b3b3b3;
+  text-align: center;
+  cursor: pointer;
+  background-color: #f9f8f8;
+}
+
+.buy-content .buy-right .buy-num .num-mid {
+  float: left;
+  height: 28px;
+  line-height: 28px;
+  width: 25px;
+  text-align: center;
+  border-top: 1px solid #b3b3b3;
+  border-bottom: 1px solid #b3b3b3;
+}
+
+.buy-content .buy-right .buy-num .num-right {
+  float: left;
+  height: 28px;
+  line-height: 28px;
+  border: 1px solid #b3b3b3;
+  width: 25px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #f9f8f8;
+}
+.buy-content .num{
+  font-size: 12px;
+  text-align: left;
+  color: #999;
+  line-height: 32px;
+  overflow: hidden;
+  margin-bottom:10px;
+}
+.buy-content .item-num{
+  color: #999;
+}
+.buy-content .buy-right .buy-button {
+  margin-top: 20px;
+  width: 204px;
+  height: 52px;
+}
+
+.buy-content .buy-right .buy-button .button {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 52px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #f10180;
+  border: 1px solid #ff0180;
+}
+
+.buy-content .buy-right .buy-button .button:hover {
+  background-color: #ff0180;
+}
+
+.footer {
+  width: 100%;
+  height: 130px;
+  background-color: #222;
+}
+
+.footer .bottom {
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  padding-top: 100px;
+}
+
+.zixun {
+  width: 980px;
+  margin: 0 auto;
+}
+.zixun img{
+  width: 100%;
+  height: 100%;
 }
