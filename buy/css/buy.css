@@ -1,0 +1,41 @@
+.logo {
+  box-sizing: border-box;
+  height: 55px;
+  background-color: #f6f6f6;
+}
+
+.logo .left {
+  width: 450px;
+}
+
+.logo .left-logo img {
+  margin-top: 7px;
+  margin-left: 10px;
+}
+
+.logo .left-logo {
+  float: left;
+}
+
+.logo .right:hover {
+  /* background-color: #e5b9b9;
+  color: #fff; */
+  border-bottom: 3px solid #f00;
+  cursor: pointer;
+}
+
+.logo .right {
+  box-sizing: border-box;
+  float: right;
+  width: 150px;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+}
+
+.hide{
+  display: none;
+}
+.show{
+  display: show;
+}

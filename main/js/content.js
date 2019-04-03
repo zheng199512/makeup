@@ -1,5 +1,8 @@
 // $(function () {
 function load() {
+  if(sessionStorage.getItem('user')){
+    $('.logo .login').text('用户名：' + sessionStorage.getItem('user'));
+  }
   $.ajax({
     type: "GET",
     url: "../../data.json",

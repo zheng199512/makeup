@@ -29,7 +29,7 @@ $(function () {
             alert('登录成功');
             $('.login-register').addClass('hide').removeClass('show');
             $('.logo .login').text('用户名：' + res.bean.phone);
-            sessionStorage.setItem('user', phone);
+            sessionStorage.setItem('user',phone);
           } else {
             $('.login-msg').addClass('error').removeClass('success').text('用户名或密码错误');
           }
