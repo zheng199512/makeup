@@ -84,7 +84,6 @@
   float: left;
 }
 
-
 .logo .left .classify ul li {
   box-sizing: border-box;
   float: left;
@@ -141,18 +140,17 @@
 .skin .skin-content .skin-item:nth-child(odd) {
   box-sizing: border-box;
   float: left;
-  width: 48%;
+  width: 25%;
   margin: 0 auto;
   border: 10px solid #fff;
 }
 
 .skin .skin-content .skin-item:nth-child(even) {
   box-sizing: border-box;
-  float: right;
-  width: 48%;
+  float: left;
+  width: 25%;
   margin: 0 auto;
   border: 10px solid #fff;
-
 }
 
 .skin .skin-content .skin-item:hover {
@@ -167,9 +165,8 @@
 }
 
 .skin .skin-content .skin-item .skin-img img {
-  width: 450px;
+  width: 100%;
   font-size: 0;
-  
 }
 
 .skin .skin-content .skin-item .skin-desc .left {
@@ -185,8 +182,10 @@
 
 .skin .skin-content .skin-item .skin-desc .right {
   margin-right: 10px;
+  font-size: 13px;
   float: right;
-  color: red;
+  line-height: 20px;
+  color: #777;
   /* font-size: 16px; */
 }
 
