@@ -137,7 +137,7 @@
   display: inline-block;
 }
 
-.skin .skin-content .skin-item:nth-child(odd) {
+.skin .skin-content .skin-item {
   box-sizing: border-box;
   float: left;
   width: 25%;
@@ -145,13 +145,13 @@
   border: 10px solid #fff;
 }
 
-.skin .skin-content .skin-item:nth-child(even) {
+/* .skin .skin-content .skin-item:nth-child(even) {
   box-sizing: border-box;
   float: left;
   width: 25%;
   margin: 0 auto;
   border: 10px solid #fff;
-}
+} */
 
 .skin .skin-content .skin-item:hover {
   border: 10px solid #f8d9d9;
@@ -170,6 +170,8 @@
 }
 
 .skin .skin-content .skin-item .skin-desc .left {
+  height:30px;
+  overflow: hidden;
   margin-left: 10px;
   float: left;
   color: red;
@@ -181,6 +183,8 @@
 }
 
 .skin .skin-content .skin-item .skin-desc .right {
+  height:50px;
+  overflow: hidden;
   margin-right: 10px;
   font-size: 13px;
   float: right;
