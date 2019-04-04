@@ -15,24 +15,25 @@ $(function () {
 
 
 
-  function buyLoad() {
+  function buyLoad(id) {
     $.ajax({
-      type: "GET",
-      url: "../../item.json",
+      type: "POST",
+      url: "http://39.96.88.244:8080/ShoppingSite/getProductItem.form",
       dataType: "json",
+      data:{name:id},
       success: function (res) {
-        if (res.returnCode === 0) {
-          var pic = '<img src="' + res.bean.pic_url + '" alt="">';
+        if (res.code === 200) {
+          var pic = '<img src="' + res.data.imgsrc + '" alt="">';
 
           $('.top-img').html(pic);
-          $('.buy-name').text(res.bean.name);
-          $('.buy-price .item-price').text(res.bean.price.toFixed(2));
-          $('.item-num').text(res.bean.num);
+          $('.buy-name').text(res.data.name);
+          $('.buy-price .item-price').text(res.data.price.toFixed(2));
+          $('.item-num').text(res.data.count);
         }
       }
     });
   }
-  buyLoad();
+  buyLoad(itemid);
 
 
   $('.buy-num .num-left').click(function (e) {
