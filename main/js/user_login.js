@@ -67,7 +67,7 @@ $(function () {
     var regData = {
       "uid": uuid(),
       "upwd": regPass,
-      "phonenum": regPhone+'asd'
+      "phonenum": regPhone
     }
     if (telReg.test(regPhone)) {
       if (regPass !== reRegPass) {
