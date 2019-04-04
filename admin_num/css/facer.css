@@ -1,0 +1,92 @@
+.facer-apply {
+  padding-top: 30px;
+  width: 980px;
+  background-color: #eee;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.facer-apply .facer-title ul,
+.facer-apply .facer-content ul {
+  margin: 0 auto;
+  width: 800px;
+}
+
+.facer-apply .facer-title ul li {
+  border-top: 1px solid #333;
+}
+
+.facer-apply .facer-title ul li,
+.facer-apply .facer-content ul li {
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  float: left;
+  width: 150px;
+  border-left: 1px solid #333;
+  border-bottom: 1px solid #333;
+  background-color: #fff;
+
+}
+
+.facer-apply .facer-title ul li:last-child,
+.facer-apply .facer-content ul li:last-child {
+  border-right: 1px solid #333;
+}
+
+.facer-apply .facer-content ul li b {
+  cursor: pointer;
+}
+
+.facer-apply .facer-content ul li b:hover {
+  color: red;
+}
+.facer-apply .facer-content:hover ul li {
+  background-color: #d8c9c9;
+}
+.facer-error {
+  padding-top: 30px;
+  width: 980px;
+  background-color: #eee;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.facer-error .facer-err-title ul,
+.facer-error .facer-err-content ul {
+  margin: 0 auto;
+  width: 800px;
+}
+
+.facer-error .facer-err-title ul li {
+  border-top: 1px solid #333;
+}
+
+.facer-error .facer-err-title ul li,
+.facer-error .facer-err-content ul li {
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  float: left;
+  width: 150px;
+  border-left: 1px solid #333;
+  border-bottom: 1px solid #333;
+  background-color: #fff;
+
+}
+
+.facer-error .facer-err-title ul li:last-child,
+.facer-error .facer-err-content ul li:last-child {
+  border-right: 1px solid #333;
+}
+
+.facer-error .facer-err-content ul li b {
+  cursor: pointer;
+}
+
+.facer-error .facer-err-content ul li b:hover {
+  color: red;
+}
+.facer-error .facer-err-content:hover ul li {
+  background-color: #d8c9c9;
+}
