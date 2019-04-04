@@ -103,24 +103,24 @@
       } else {
         $.ajax({
           type: "GET",
-          url: "../../data.json",
+          url: "http://39.96.88.244:8080/ShoppingSite/getProductList.form",
           dataType: "json",
           success: function (res) {
-            if (res.returnCode === 0) {
-              let a = '';
-              for (let i = 0; i < res.data.length; i++) {
-                if (res.data[i].classify === classifyName) {
-                  if (res.data[i].num < 10) {
-                    a += '<div class="product-content clearfix"><ul><li><span>' + res.data[i].id + '</span></li><li><span>' + res.data[i].name + '</span></li><li><span>' + res.data[i].price + '</span></li><li><span title="' + res.data[i].pic_url + '">' + res.data[i].pic_url + '</span></li><li><span>' + res.data[i].classify + '</span></li><li><span style="color:red;">' + res.data[i].num + '</span></li><li><span>' + res.data[i].sale_volume + '</span></li><li><b onclick="deletePro(' + res.data[i].id + ')" >删除</b></li></ul></div>';
-                  } else {
-                    a += '<div class="product-content clearfix"><ul><li><span>' + res.data[i].id + '</span></li><li><span>' + res.data[i].name + '</span></li><li><span>' + res.data[i].price + '</span></li><li><span title="' + res.data[i].pic_url + '">' + res.data[i].pic_url + '</span></li><li><span>' + res.data[i].classify + '</span></li><li><span>' + res.data[i].num + '</span></li><li><span>' + res.data[i].sale_volume + '</span></li><li><b onclick="deletePro(' + res.data[i].id + ')">删除</b></li></ul></div>';
-                  }
-
+          if (res.code === 200) {
+            let a = '';
+            for (let i = 0; i < res.data.length; i++) {
+              if (res.data[i].type === classifyName) {
+                if (res.data[i].count < 10) {
+                  a += '<div class="product-content clearfix"><ul><li><span>' + res.data[i].id + '</span></li><li><span>' + res.data[i].name + '</span></li><li><span>' + res.data[i].price + '</span></li><li><span title="' + res.data[i].imgsrc + '">' + res.data[i].imgsrc + '</span></li><li><span>' + res.data[i].type + '</span></li><li><span style="color:red;">' + res.data[i].count + '</span></li><li><span>' + res.data[i].volume + '</span></li><li><b onclick="deletePro(' + res.data[i].name + ')" >删除</b>&nbsp;<b onclick="editPro(' + res.data[i].id + ')" >修改</b></li></ul></div>';
+                } else {
+                  a += '<div class="product-content clearfix"><ul><li><span>' + res.data[i].id + '</span></li><li><span>' + res.data[i].name + '</span></li><li><span>' + res.data[i].price + '</span></li><li><span title="' + res.data[i].imgsrc + '">' + res.data[i].imgsrc + '</span></li><li><span>' + res.data[i].type + '</span></li><li><span>' + res.data[i].count + '</span></li><li><span>' + res.data[i].volume + '</span></li><li><b onclick="deletePro(' + res.data[i].name + ')">删除</b>&nbsp;<b onclick="editPro(' + res.data[i].id + ')" >修改</b></li></ul></div>';
                 }
+
               }
-              $('.test').html(a);
             }
+            $('.test').html(a);
           }
+        }
         });
       }
     });
@@ -154,13 +154,13 @@
 
       $.ajax({
         type: "GET",
-        url: "../../data_sale.json",
+        url: "http://39.96.88.244:8080/ShoppingSite/getRecords.form",
         dataType: "json",
         success: function (res) {
           if (res.code === 200) {
             let a = '';
             for (let i = 0; i < res.data.length; i++) {
-              a += '<div class="sale_content clearfix"><ul> <li><span>' + res.data[i].id + '</span></li><li><span>' + res.data[i].user_id + '</span></li><li><span>' + res.data[i].product_name + '</span></li><li><span>' + res.data[i].nums + '</span></li><li><span>' + res.data[i].price + '</span></li><li><span>' + res.data[i].time + '</span></li></ul></div>'
+              a += '<div class="sale_content clearfix"><ul> <li><span>'+res.data[i].pro_id+'</span></li><li><span>'+res.data[i].user_id+'</span></li><li><span>'+res.data[i].name+'</span></li><li><span>'+res.data[i].count+'</span></li><li><span>'+res.data[i].price+'</span></li><li><span>'+res.data[i].time+'</span></li></ul></div>'
             }
             $('.sale-main-main').html(a);
           }
@@ -272,14 +272,14 @@
       // 加载数据
       $.ajax({
         type: "GET",
-        url: "../../facer.json",
+        url: "http://39.96.88.244:8080/ShoppingSite/getApply.form",
         dataType: "json",
         success: function (res) {
           if (res.code == 200) {
             var a = '';
             for (let i = 0; i < res.data.length; i++) {
               a +=
-                '<div class="facer-content"><ul><li>' + res.data[i].apply_id + '</li><li>' + res.data[i].facer_name + '</li><li>' + res.data[i].facer_number + '</li><li>' + res.data[i].level + '</li><li><b onclick="pass(this,' + res.data[i].apply_id + ')">通过</b>&nbsp<b onclick="nopass(this,' + res.data[i].apply_id + ')">拒绝</b></li></ul></div>';
+                '<div class="facer-content"><ul><li>' + res.data[i].apply_id + '</li><li>' + res.data[i].facer_name + '</li><li>' + res.data[i].facer_phone + '</li><li>' + res.data[i].level + '</li><li><b onclick="pass(this,' + res.data[i].apply_id + ')">通过</b>&nbsp<b onclick="nopass(this,' + res.data[i].apply_id + ')">拒绝</b></li></ul></div>';
             }
             $('.facer-content-load').html(a);
           }
@@ -296,7 +296,7 @@
       // 加载状态
       $.ajax({
         type: "GET",
-        url: "../../facer-err.json",
+        url: "http://39.96.88.244:8080/ShoppingSite/getFacer.form",
         dataType: "json",
         success: function (res) {
 
@@ -304,9 +304,9 @@
           if (res.code === 200) {
             for (let i = 0; i < res.data.length; i++) {
               if (res.data[i].error_status === 0) {
-                a += '<div class="facer-err-content"><ul><li>' + res.data[i].apply_id + '</li><li>' + res.data[i].facer_name + '</li><li>' + res.data[i].facer_sex + '</li><li>' + res.data[i].facer_phone + '</li><li><b onclick="changeStatus(this,' + res.data[i].apply_id + ')">未违约</b></li></ul> </div>'
+                a += '<div class="facer-err-content"><ul><li>' + res.data[i].facer_id + '</li><li>' + res.data[i].facer_name + '</li><li>' + res.data[i].facer_Sex + '</li><li>' + res.data[i].facer_phone + '</li><li><b onclick="changeStatus(this,' + res.data[i].facer_id + ')">未违约</b></li></ul> </div>'
               } else if (res.data[i].error_status === 1) {
-                a += '<div class="facer-err-content"><ul><li>' + res.data[i].apply_id + '</li><li>' + res.data[i].facer_name + '</li><li>' + res.data[i].facer_sex + '</li><li>' + res.data[i].facer_phone + '</li><li><b onclick="changeStatus(this,' + res.data[i].apply_id + ')">违约</b></li></ul> </div>'
+                a += '<div class="facer-err-content"><ul><li>' + res.data[i].facer_id + '</li><li>' + res.data[i].facer_name + '</li><li>' + res.data[i].facer_Sex + '</li><li>' + res.data[i].facer_phone + '</li><li><b onclick="changeStatus(this,' + res.data[i].facer_id + ')">违约</b></li></ul> </div>'
               }
             }
           }
