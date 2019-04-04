@@ -5,20 +5,20 @@ function load() {
   }
   $.ajax({
     type: "GET",
-    url: "../../data.json",
+    url: "http://39.96.88.244:8080/ShoppingSite/getProductList.form",
     dataType: "json",
     success: function (res) {
-      if (res.returnCode === 0) {
+      if (res.code === 200) {
         var hufu = '';
         var meizhuang = '';
         var xiangfen = '';
-        for (let i = 0; i < res.beans.length; i++) {
-          if (res.beans[i].classify === '护肤') {
-            hufu += '<div class="skin-item"><div class="skin-img"><a href="http://127.0.0.1:5500/buy/WEB-INF/jsp/buy.html?itemid=' + res.beans[i].id + '"><img src="https://img.dmallcdn.com/20161112/b17624d1-65f7-44d9-9fbd-fae4666291d1_360x360H" alt=""></a></div><div class="skin-desc"><div class="left">￥<span>' + res.beans[i].price + '</span></div><div class="right">大宝水凝保湿洁面乳 100g 新老包装随机&nbsp;&nbsp;已售' + res.beans[i].sale_volume + '</div></div></div>'
-          } else if (res.beans[i].classify === '美妆') {
-            meizhuang += '<div class="skin-item"><div class="skin-img"><a href="http://localhost:8080/buy.html?itemid=' + res.beans[i].id + '"><img src="' + res.beans[i].pic_url + '" alt=""></a></div><div class="skin-desc"><div class="left">￥<span>' + res.beans[i].price + '</span></div><div class="right">' + res.beans[i].name + '&nbsp;&nbsp;已售' + res.beans[i].sale_volume + '</div></div></div>'
-          } else if (res.beans[i].classify === '香氛') {
-            xiangfen += '<div class="skin-item"><div class="skin-img"><a href="http://localhost:8080/buy.html?itemid=' + res.beans[i].id + '"><img src="' + res.beans[i].pic_url + '" alt=""></a></div><div class="skin-desc"><div class="left">￥<span>' + res.beans[i].price + '</span></div><div class="right">' + res.beans[i].name + '&nbsp;&nbsp;已售' + res.beans[i].sale_volume + '</div></div></div>'
+        for (let i = 0; i < res.data.length; i++) {
+          if (res.data[i].type === '护肤') {
+            hufu += '<div class="skin-item"><div class="skin-img"><a href="http://127.0.0.1:5500/buy/WEB-INF/jsp/buy.html?itemid=' + res.data[i].id + '"><img src="' + res.data[i].imgsrc + '"alt=""></a></div><div class="skin-desc"><div class="left">￥<span>' + res.data[i].price + '</span></div><div class="right">' + res.data[i].name + '&nbsp;&nbsp;已售' + res.data[i].volume + '</div></div></div>'
+          } else if (res.data[i].type === '美妆') {
+            meizhuang += '<div class="skin-item"><div class="skin-img"><a href="http://localhost:8080/buy.html?itemid=' + res.data[i].id + '"><img src="' + res.data[i].imgsrc + '" alt=""></a></div><div class="skin-desc"><div class="left">￥<span>' + res.data[i].price + '</span></div><div class="right">' + res.data[i].name + '&nbsp;&nbsp;已售' + res.data[i].volume + '</div></div></div>'
+          } else if (res.data[i].type === '香氛') {
+            xiangfen += '<div class="skin-item"><div class="skin-img"><a href="http://localhost:8080/buy.html?itemid=' + res.data[i].id + '"><img src="' + res.data[i].imgsrc + '" alt=""></a></div><div class="skin-desc"><div class="left">￥<span>' + res.data[i].price + '</span></div><div class="right">' + res.data[i].name + '&nbsp;&nbsp;已售' + res.data[i].volume + '</div></div></div>'
           }
         }
         $('#hufu-content').html(hufu)
@@ -33,20 +33,20 @@ function load() {
 function list() {
   $.ajax({
     type: "GET",
-    url: "../../list.json",
+    url: "http://39.96.88.244:8080/ShoppingSite/getList.form",
     dataType: "json",
     success: function (res) {
       var hufuList = '';
       var meizhuangList = '';
       var xiangfenList = '';
-      if (res.returnCode === 0) {
-        for (let i = 0; i < res.beans.length; i++) {
-          if (res.beans[i].classify === '护肤') {
-            hufuList += '<li><a href="http://localhost:8080/buy.html?itemid="' + res.beans[i].id + '>' + res.beans[i].name + '</a></li>';
-          } else if (res.beans[i].classify === '美妆') {
-            meizhuangList += '<li><a href="http://localhost:8080/buy.html?itemid="' + res.beans[i].id + '>' + res.beans[i].name + '</a></li>';
-          } else if (res.beans[i].classify === '香氛') {
-            xiangfenList += '<li><a href="http://localhost:8080/buy.html?itemid="' + res.beans[i].id + '>' + res.beans[i].name + '</a></li>';
+      if (res.code === 200) {
+        for (let i = 0; i < res.data.length; i++) {
+          if (res.data[i].classify === '护肤') {
+            hufuList += '<li><a href="http://localhost:8080/buy.html?itemid="' + res.data[i].id + '>' + res.data[i].name + '</a></li>';
+          } else if (res.data[i].classify === '美妆') {
+            meizhuangList += '<li><a href="http://localhost:8080/buy.html?itemid="' + res.data[i].id + '>' + res.data[i].name + '</a></li>';
+          } else if (res.data[i].classify === '香氛') {
+            xiangfenList += '<li><a href="http://localhost:8080/buy.html?itemid="' + res.data[i].id + '>' + res.data[i].name + '</a></li>';
           }
         }
         $('#hufu-list').html(hufuList);
