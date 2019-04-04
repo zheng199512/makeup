@@ -27,12 +27,10 @@ $(function () {
   //登录
   $('#ok').click(function (e) {
     e.preventDefault();
-    console.log(userFlag)
-    console.log(passFlag)
     if (userFlag && passFlag) {
       let data = {
-        "username": $('.pannel .username').val(),
-        "password": $('.pannel .password').val()
+        "uid": $('.pannel .username').val(),
+        "upwd": $('.pannel .password').val()
       }
       /*
         后端返回json数据格式(0表示登录成功，-999表示登录失败)：
@@ -42,7 +40,7 @@ $(function () {
       */
       $.ajax({
         type: "POST",
-        url: "http://localhost:8080/admin_login",
+        url: "http://39.96.88.244:8080/ShoppingSite/login.form",
         data: data,
         dataType: 'json',
         success: function (result) {

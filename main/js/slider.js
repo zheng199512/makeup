@@ -1,10 +1,10 @@
 var imgWidth = $('.slider-item').width();
 var imgHeight = $('.slider-item').height();
-window.onresize = function () { //监听窗口变化
-  window.location.reload();
+// window.onresize = function () { //监听窗口变化
+  // window.location.reload();
   imgWidth = $('.slider-item').width();
   imgHeight = $('.slider-item').height();
-}
+// }
 var sliderContent = $('#img-container');
 $('.slider-item').css({
   'width': imgWidth
