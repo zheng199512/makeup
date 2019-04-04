@@ -9,6 +9,7 @@
   <script src="../../js/lib/jquery-3.3.1.min.js"></script>
   <link rel="stylesheet" href="../../css/reset.css">
   <link rel="stylesheet" href="../../css/admin.css">
+  <link rel="stylesheet" href="../../css/facer.css">
   <script src="../../js/product.js"></script>
 </head>
 
@@ -19,7 +20,8 @@
     <div class="mulu">
       <ul>
         <li class="manage">化妆品登记管理</li>
-        <li>美容师管理</li>
+        <li class="facer">美容师申请</li>
+        <li class="facer-err">美容师管理</li>
         <li class="sale">销售记录</li>
       </ul>
     </div>
@@ -47,7 +49,7 @@
           <li><span>操作</span></li>
         </ul>
       </div>
-      <div class="test">
+      <div class="test clearfix">
         <!-- 商品内容 -->
       </div>
     </div>
@@ -94,6 +96,39 @@
 
   </div>
   <!-- 商品添加页面结束 -->
+
+  <!-- 美容师管理 -->
+  <div class="facer-apply hide">
+    <div class="facer-main clearfix">
+      <div class="facer-title clearfix">
+        <ul>
+          <li>编号</li>
+          <li>姓名</li>
+          <li>手机号</li>
+          <li>级别</li>
+          <li>操作</li>
+        </ul>
+      </div>
+      <div class="facer-content-load"></div>
+    </div>
+  </div>
+  <!-- 美容师管理结束 -->
+  <!-- 美容师状态 -->
+  <div class="facer-error hide">
+      <div class="facer-err-main clearfix">
+          <div class="facer-err-title clearfix">
+            <ul>
+              <li>编号</li>
+              <li>姓名</li>
+              <li>性别</li>
+              <li>手机号</li>
+              <li>状态</li>
+            </ul>
+          </div>
+          <div class="facer-err-zheng"></div>
+        </div>
+  </div>
+  <!-- 美容师状态结束 -->
   <!-- 销售记录开始 -->
   <div class="sale_record hide">
     <div class="sale_main">
