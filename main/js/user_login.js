@@ -41,10 +41,10 @@ $(function () {
         data: userLogin,
         success: function (res) {
           console.log(res);
-          if (res.returnCode === 0) {
+          if (res.code === 0) {
             alert('登录成功');
             $('.login-register').addClass('hide').removeClass('show');
-            $('.logo .login').text('用户名：' + res.bean.phone);
+            $('.logo .login').text('用户名：' + res.data.phonenum);
             sessionStorage.setItem('user', phone);
           } else {
             $('.login-msg').addClass('error').removeClass('success').text('用户名或密码错误');
@@ -80,7 +80,7 @@ $(function () {
           dataType: "json",
           success: function (res) {
             console.log(res);
-            if (res.returnCode === 0) {
+            if (res.code === 0) {
               alert('注册成功，请登录');
             } else {
               alert('注册失败');
