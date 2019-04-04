@@ -27,7 +27,7 @@ $(function () {
 
           $('.top-img').html(pic);
           $('.buy-name').text(res.data.name);
-          $('.buy-price .item-price').text(res.data.price.toFixed(2));
+          $('.buy-price .item-price').text(Number(res.data.price).toFixed(2));
           $('.item-num').text(res.data.count);
         }
       }
