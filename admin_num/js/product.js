@@ -3,9 +3,9 @@ function deletePro(id) {
   if (confirm('确认删除？')) {
     $.ajax({
       type: "GET",
-      url: "HTTP://localhost:8080/delete=" + id,
+      url: "http://39.96.88.244:8080/ShoppingSite/getProductList.form?name" + id,
       success: function (res) {
-        if (res.returnCode === 0) {
+        if (res.code === 200) {
           alert('删除成功');
         }
       }
@@ -19,7 +19,7 @@ function editPro(id) {
     url: "../../data_edit.json",
     dataType: "json",
     success: function (res) {
-      if (res.returnCode === 0) {
+      if (res.code === 200) {
         $('.content').addClass('hide').removeClass('show');
         $('.add-pro').addClass('show').removeClass('hide');
         $('.add-pro .name').val(res.bean.name);
@@ -38,16 +38,16 @@ $(function () {
   function init() {
     $.ajax({
       type: "GET",
-      url: "../../data.json",
+      url: "http://39.96.88.244:8080/ShoppingSite/getProductList.form",
       dataType: "json",
       success: function (res) {
-        if (res.returnCode === 0) {
+        if (res.code === 200) {
           let a = '';
-          for (let i = 0; i < res.beans.length; i++) {
-            if (res.beans[i].num < 10) {
-              a += '<div class="product-content clearfix"><ul><li><span>' + res.beans[i].id + '</span></li><li><span>' + res.beans[i].name + '</span></li><li><span>' + res.beans[i].price + '</span></li><li><span title="' + res.beans[i].pic_url + '">' + res.beans[i].pic_url + '</span></li><li><span>' + res.beans[i].classify + '</span></li><li><span style="color:red;">' + res.beans[i].num + '</span></li><li><span>' + res.beans[i].sale_volume + '</span></li><li><b onclick="deletePro(' + res.beans[i].id + ')" >删除</b>&nbsp;<b onclick="editPro(' + res.beans[i].id + ')">修改</b></li></ul></div>';
+          for (let i = 0; i < res.data.length; i++) {
+            if (res.data[i].num < 10) {
+              a += '<div class="product-content clearfix"><ul><li><span>' + res.data[i].id + '</span></li><li><span>' + res.data[i].name + '</span></li><li><span>' + res.data[i].price + '</span></li><li><span title="' + res.data[i].imgsrc + '">' + res.data[i].imgsrc + '</span></li><li><span>' + res.data[i].type + '</span></li><li><span style="color:red;">' + res.data[i].count + '</span></li><li><span>' + res.data[i].volume + '</span></li><li><b onclick="deletePro(' + res.data[i].name + ')" >删除</b>&nbsp;<b onclick="editPro(' + res.data[i].id + ')">修改</b></li></ul></div>';
             } else {
-              a += '<div class="product-content clearfix"><ul><li><span>' + res.beans[i].id + '</span></li><li><span>' + res.beans[i].name + '</span></li><li><span>' + res.beans[i].price + '</span></li><li><span title="' + res.beans[i].pic_url + '">' + res.beans[i].pic_url + '</span></li><li><span>' + res.beans[i].classify + '</span></li><li><span>' + res.beans[i].num + '</span></li><li><span>' + res.beans[i].sale_volume + '</span></li><li><b onclick="deletePro(' + res.beans[i].id + ')" >删除</b>&nbsp;<b onclick="editPro(' + res.beans[i].id + ')">修改</b></li></ul></div>';
+              a += '<div class="product-content clearfix"><ul><li><span>' + res.data[i].id + '</span></li><li><span>' + res.data[i].name + '</span></li><li><span>' + res.data[i].price + '</span></li><li><span title="' + res.data[i].imgsrc + '">' + res.data[i].imgsrc + '</span></li><li><span>' + res.data[i].type + '</span></li><li><span>' + res.data[i].count + '</span></li><li><span>' + res.data[i].volume + '</span></li><li><b onclick="deletePro(' + res.data[i].name + ')" >删除</b>&nbsp;<b onclick="editPro(' + res.data[i].id + ')">修改</b></li></ul></div>';
             }
           }
           $('.test').html(a);
@@ -73,12 +73,12 @@ $(function () {
         success: function (res) {
           if (res.returnCode === 0) {
             let a = '';
-            for (let i = 0; i < res.beans.length; i++) {
-              if (res.beans[i].classify === classifyName) {
-                if (res.beans[i].num < 10) {
-                  a += '<div class="product-content clearfix"><ul><li><span>' + res.beans[i].id + '</span></li><li><span>' + res.beans[i].name + '</span></li><li><span>' + res.beans[i].price + '</span></li><li><span title="' + res.beans[i].pic_url + '">' + res.beans[i].pic_url + '</span></li><li><span>' + res.beans[i].classify + '</span></li><li><span style="color:red;">' + res.beans[i].num + '</span></li><li><span>' + res.beans[i].sale_volume + '</span></li><li><b onclick="deletePro(' + res.beans[i].id + ')" >删除</b>&nbsp;<b onclick="editPro(' + res.beans[i].id + ')" >修改</b></li></ul></div>';
+            for (let i = 0; i < res.data.length; i++) {
+              if (res.data[i].classify === classifyName) {
+                if (res.data[i].num < 10) {
+                  a += '<div class="product-content clearfix"><ul><li><span>' + res.data[i].id + '</span></li><li><span>' + res.data[i].name + '</span></li><li><span>' + res.data[i].price + '</span></li><li><span title="' + res.data[i].pic_url + '">' + res.data[i].pic_url + '</span></li><li><span>' + res.data[i].classify + '</span></li><li><span style="color:red;">' + res.data[i].num + '</span></li><li><span>' + res.data[i].sale_volume + '</span></li><li><b onclick="deletePro(' + res.data[i].id + ')" >删除</b>&nbsp;<b onclick="editPro(' + res.data[i].id + ')" >修改</b></li></ul></div>';
                 } else {
-                  a += '<div class="product-content clearfix"><ul><li><span>' + res.beans[i].id + '</span></li><li><span>' + res.beans[i].name + '</span></li><li><span>' + res.beans[i].price + '</span></li><li><span title="' + res.beans[i].pic_url + '">' + res.beans[i].pic_url + '</span></li><li><span>' + res.beans[i].classify + '</span></li><li><span>' + res.beans[i].num + '</span></li><li><span>' + res.beans[i].sale_volume + '</span></li><li><b onclick="deletePro(' + res.beans[i].id + ')">删除</b>&nbsp;<b onclick="editPro(' + res.beans[i].id + ')" >修改</b></li></ul></div>';
+                  a += '<div class="product-content clearfix"><ul><li><span>' + res.data[i].id + '</span></li><li><span>' + res.data[i].name + '</span></li><li><span>' + res.data[i].price + '</span></li><li><span title="' + res.data[i].pic_url + '">' + res.data[i].pic_url + '</span></li><li><span>' + res.data[i].classify + '</span></li><li><span>' + res.data[i].num + '</span></li><li><span>' + res.data[i].sale_volume + '</span></li><li><b onclick="deletePro(' + res.data[i].id + ')">删除</b>&nbsp;<b onclick="editPro(' + res.data[i].id + ')" >修改</b></li></ul></div>';
                 }
 
               }
@@ -115,10 +115,10 @@ $(function () {
       url: "../../data_sale.json",
       dataType: "json",
       success: function (res) {
-        if (res.returnCode === 0) {
+        if (res.code === 200) {
           let a = '';
-          for (let i = 0; i < res.beans.length; i++) {
-            a += '<div class="sale_content clearfix"><ul> <li><span>'+res.beans[i].id+'</span></li><li><span>'+res.beans[i].user_id+'</span></li><li><span>'+res.beans[i].product_name+'</span></li><li><span>'+res.beans[i].nums+'</span></li><li><span>'+res.beans[i].price+'</span></li><li><span>'+res.beans[i].time+'</span></li></ul></div>'
+          for (let i = 0; i < res.data.length; i++) {
+            a += '<div class="sale_content clearfix"><ul> <li><span>'+res.data[i].id+'</span></li><li><span>'+res.data[i].user_id+'</span></li><li><span>'+res.data[i].product_name+'</span></li><li><span>'+res.data[i].nums+'</span></li><li><span>'+res.data[i].price+'</span></li><li><span>'+res.data[i].time+'</span></li></ul></div>'
           }
           $('.sale-main-main').html(a);
         }
