@@ -80,7 +80,7 @@ $(function () {
           dataType: "json",
           success: function (res) {
             console.log(res);
-            if (res.code === 0) {
+            if (res.code === 200) {
               alert('注册成功，请登录');
             } else {
               alert('注册失败');
