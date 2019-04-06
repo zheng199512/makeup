@@ -33,6 +33,7 @@ $(function () {
       }
     });
   }
+
   buyLoad(itemid);
 
 
@@ -45,9 +46,8 @@ $(function () {
     } else {
       $('.buy-num .num-mid').text(0);
     }
-
-
   });
+
   $('.buy-num .num-right').click(function (e) {
     e.preventDefault();
     var num = Number($('.buy-num .num-mid').text());
@@ -62,7 +62,7 @@ $(function () {
 
   $('.buy-button .button').click(function (e) {
     e.preventDefault();
-    if (sessionStorage.getItem('user')) {
+    if (sessionStorage.getItem('user')==null) {
       alert('请先登录');
     } else {
       var user = sessionStorage.getItem('user');
