@@ -1,7 +1,7 @@
 {
-  "returnCode": 0,
+  "code": 200,
   "total": 19,
-  "beans": [{
+  "data": [{
       "id": 112222,
       "name": "nihao",
       "price": 12.00,
