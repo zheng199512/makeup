@@ -1,6 +1,7 @@
 body{
-  background-image: url('../images/pink_rice.png');
+  background-image: url('../images/7255.jpg_wh1200.jpg');
   background-attachment: fixed;
+  background-size: cover;
 }
 .header {
   width: 100%;
