@@ -3,13 +3,12 @@ $(function () {
     e.preventDefault();
     var name = $('.search-input-value').val();
     $('#search-item').addClass('show').removeClass('hide');
-    var data = {
-      "name": name
-    };
+    
     $.ajax({
-      type: "GET",
-      url: "../../data.json",
+      type: "POST",
+      url: "http://39.96.88.244:8080/ShoppingSite/Search.form",
       dataType: "json",
+      data:{word:name},
       success: function (res) {
         if (res.code === 200) {
           var a = '';
