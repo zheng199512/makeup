@@ -77,7 +77,7 @@
     if (confirm('确认删除？')) {
       $.ajax({
         type: "GET",
-        url: "http://39.96.88.244:8080/ShoppingSite/getProductList.form?name" + id,
+        url: "http://39.96.88.244:8080/ShoppingSite/delProduct.form?name=" + id,
         success: function (res) {
           if (res.code === 200) {
             alert('删除成功');
@@ -240,14 +240,15 @@
 
         $.ajax({
           type: "POST",
-          url: "http://localhost:8080/admin_upload",
+          url: "http://39.96.88.244:8080/ShoppingSite/Upload.form",
           data: formData,
           // 告诉jQuery不要去处理发送的数据
           processData: false,
           // 告诉jQuery不要去设置Content-Type请求头
           contentType: false,
+          enctype: 'multipart/form-data',
           success: function (res) {
-            if (res.returnCode === 0) {
+            if (res.code === 0) {
               alert('上传成功');
               window.location = './admin.html'
             }
